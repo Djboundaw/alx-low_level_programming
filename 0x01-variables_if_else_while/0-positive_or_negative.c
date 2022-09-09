@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 /**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ *
  * betty style doc for function main goes there
  * this program will tell if the stored number
  * n is positive or negative
