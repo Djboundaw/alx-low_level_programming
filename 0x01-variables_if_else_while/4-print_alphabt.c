@@ -10,13 +10,13 @@
  */
 int main(void)
 {
-	int i;
+	char letter;
 
-	for (i = 0; i <= 25; i++)
+	for (letter = 'a'; letter <= 'z'; ++letter)
 	{
-		if ('a' + i == 'e' || 'a' + i == 'q')
+		if (letter == 'e' || letter == 'q')
 			continue;
-		putchar('a' + i);
+		putchar(letter);
 	}
 	putchar('\n');
 	return (0);
