@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	fwrite(message, sizeof(char), sizeof(message) - 1, stderr);
+	char txt[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	fwrite(txt, sizeof(char), sizeof(txt) - 1, stderr);
 	return (1);
 }
