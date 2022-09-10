@@ -22,7 +22,7 @@ int main(void)
 					continue;
 				for (dgt4 = 0; dgt4 <= 9; dgt4++)
 				{
-					if (dgt2 >= dgt4)
+					if (dgt1 >= dgt2 && dgt2 >= dgt4)
 						continue;
 					putchar(dgt1 + '0');
 					putchar(dgt2 + '0');
