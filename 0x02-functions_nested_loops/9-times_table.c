@@ -1,15 +1,36 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
- * main - Entry point
+ * times_table - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: it's a void function no return value
  *
- * 
+ * This function will display the 9 times table
  */
-int main(void)
+void times_table(void)
 {
+	int i, j;
 
-	return (0);
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 10; j++)
+		{
+			int c;
+
+			c = i * j;
+			if (c < 10)
+			{
+				_putchar(32);
+				_putchar(32);
+				_putchar('0' + c);
+			}
+			else
+			{
+				_putchar(32);
+				_putchar('0' + c / 10);
+				_putchar('0' + c % 10);
+			}
+			_putchar(44);
+		}
+		_putchar(10);
+	}
 }
