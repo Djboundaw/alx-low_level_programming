@@ -1,15 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  *
- * This program has a function which print
- * the alphabet in lowercase
+ * This program will call the function putchar
+ * to print the alphabet in lowercase
  */
 int main(void)
 {
+	print_alphabet();
 	return (0);
 }
