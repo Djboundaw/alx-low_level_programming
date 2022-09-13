@@ -1,15 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
- * main - Entry point
+ * jack_bauer - Entry point
  *
- * Return: Always 0 (Success)
- *
- * 
+ * Return: the function has no return value
  */
-int main(void)
+void jack_bauer(void)
 {
+	int i, j;
 
-	return (0);
+	for (i = 0; i < 24; i++)
+	{
+		for (j = 0; j < 60; j++)
+		{
+			_putchar(i / 10 + '0');
+			_putchar(i % 10 + '0');
+			_putchar(58);
+			_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
+			_putchar(10);
+		}
+	}
 }
