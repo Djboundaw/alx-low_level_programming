@@ -1,15 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
- * main - Entry point
+ * print_to_98 - Entry point
+ * @n: the parameter where will start the count
  *
- * Return: Always 0 (Success)
- *
- * 
+ * Return: it's a void function no return value
  */
-int main(void)
+void print_to_98(int n)
 {
+	int i;
 
-	return (0);
+	if (n < 98)
+	{
+		for (i = n; i <= 98; i++)
+		{
+			printf("%d", i);
+			if (i == 98)
+				break;
+			printf(",");
+			printf(" ");
+		}
+	}
+	else
+	{
+		for (i = n; i >= 98; i--)
+		{
+			printf("%d", i);
+			if (i == 98)
+				break;
+			printf(",");
+			printf(" ");
+		}
+	}
+	printf("\n");
 }
