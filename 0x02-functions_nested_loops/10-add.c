@@ -1,15 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
- * main - Entry point
+ * add - Entry point
+ * @a: first parameter
+ * @b: second parameter
  *
- * Return: Always 0 (Success)
+ * Return: return the result of a + b
  *
- * 
+ * This function will add two given parameters
  */
-int main(void)
+int add(int a, int b)
 {
-
-	return (0);
+	return (a + b);
 }
