@@ -1,15 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
- * main - Entry point
+ * _isalpha - Entry point
+ * @c: the parameter to check
  *
- * Return: Always 0 (Success)
+ * Return: 1 if c is a letter and 0 else
  *
- * 
+ * This function will check if c is a letter or not
  */
-int main(void)
+int _isalpha(int c)
 {
-
-	return (0);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }
