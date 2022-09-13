@@ -1,15 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
- * main - Entry point
+ * print_last_digit - Entry point
+ * @c: the parameter to check
  *
- * Return: Always 0 (Success)
- *
- * 
+ * The function will print the last digit of c
+ * Return: 0 (Success)
  */
-int main(void)
+int print_last_digit(int c)
 {
+	int l_digit;
 
-	return (0);
+	if (c < 0)
+	{
+		c = c * -1;
+		l_digit = c % 10;
+	}
+	else
+		l_digit = c % 10;
+	_putchar(l_digit + '0');
+	return (l_digit);
 }
