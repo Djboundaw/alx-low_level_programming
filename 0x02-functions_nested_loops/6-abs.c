@@ -1,4 +1,4 @@
-#include "1-main.h"
+#include "main.h"
 /**
  * _abs - Entry point
  * @c: the parameter to return
