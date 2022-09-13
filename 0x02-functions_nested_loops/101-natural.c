@@ -18,7 +18,6 @@ int main(void)
 		if ((n % 3 == 0) || (n % 5 == 0))
 			sum = sum + n;
 	}
-	printf("Sum of all multiples of 3");
-	printf(" or 5 below 1024 is %d\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
