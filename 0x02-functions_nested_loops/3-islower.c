@@ -1,15 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 /**
- * main - Entry point
+ * _islower - Entry point
+ *@c: the parameter to check
  *
- * Return: Always 0 (Success)
- *
- * 
+ * Return: 1 if the char C is uppercase
+ * and 0 if the char c is lowercae
  */
-int main(void)
+int _islower(int c)
 {
-
-	return (0);
+	if (c >= 97 && c <= 122)
+		return (1);
+	else
+		return (0);
 }
