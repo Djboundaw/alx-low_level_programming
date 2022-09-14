@@ -5,19 +5,19 @@
  * main - Entry point
  *
  * This program prints the 98 first
- * Fibonacci numbers
+ * Fibonacci numbers (very hard)
  *
  * Return: returns 0 (Success)
  */
 int main(void)
 {
-	int i = 0;
+	int count = 0;
 	unsigned long a, b, c;
 	unsigned long a1, a2, b1, b2, c1, c2;
 
 	a = 0;
 	b = 1;
-	for (i = 0; i < 92; i++)
+	for (count = 0; count < 92; count++)
 	{
 		c = a + b;
 		a = b;
@@ -28,23 +28,23 @@ int main(void)
 	b1 = b / 10000000000;
 	a2 = a % 10000000000;
 	b2 = b % 10000000000;
-	for (i = 93; i <= 98; i++)
+	for (count = 93; count <= 98; count++)
 	{
 		c1 = a1 + b1;
 		c2 = a2 + b2;
-		if (b1 + b2 > 9999999999)
+		if ((a2 + b2) > 9999999999)
 		{
-			c1 += 1;
-			c2 %= 10000000000;
+			c1 = c1 + 1;
+			c2 = c2 % 10000000000;
 		}
 		printf("%lu%lu", c1, c2);
-		if (i != 98)
+		if (count < 98)
 			printf(", ");
 		a1 = b1;
 		a2 = b2;
 		b1 = c1;
 		b2 = c2;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
