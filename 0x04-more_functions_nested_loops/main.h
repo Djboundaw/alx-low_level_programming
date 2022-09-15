@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <unistd.h>
+#ifndef MAIN_H
+#define MAIN_H
 
 int _putchar(char c);
 
@@ -22,3 +22,5 @@ void print_diagonal(int n);
 void print_square(int size);
 
 void print_triangle(int size);
+
+#endif /* MAIN_H */
