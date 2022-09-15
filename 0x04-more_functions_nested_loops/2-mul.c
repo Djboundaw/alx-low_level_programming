@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isdigit - Entry point
+ * mul - Entry point
  * @a: the first parameter
  * @b: the second parameter
  *
