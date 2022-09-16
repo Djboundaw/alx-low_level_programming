@@ -7,33 +7,31 @@
  */
 void print_number(int n)
 {
-	int a, b, max, min, i, j;
+	int a, max, min, i, j;
 
 	max = 2147483647, min = -2147483648;
 	i = 8, j = 7;
-	if (n == 0)
-		_putchar(n + '0');
-	else if (n > -100 && n < 100)
+	if (n < max && n > min)
 	{
 		if (n < 0)
 		{
-			n = n * (-1);
+			a = -n;
 			_putchar(45);
 		}
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n > min && n < max)
-	{
-		if (n < 0)
+		else
+			a = n;
+		if (a < 10)
+			_putchar(a + '0');
+		else if (a < 100)
 		{
-			n = n * (-1);
-			_putchar(45);
+			_putchar(a / 10 + '0');
+			_putchar(a % 10 + '0');
 		}
-		a = n / 10;
-		b = n % 10;
-		print_number(a);
-		_putchar(b + '0');
+		else
+		{
+			print_number(a / 10);
+			_putchar(a % 10 + '0');
+		}
 	}
 	else if (n == min)
 	{
