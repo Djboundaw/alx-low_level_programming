@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <math.h>
+#include <limits.h>
 
 /**
  * print_number - Entry point
@@ -26,7 +26,7 @@ void print_number(int n)
 		_putchar(n / 10 + '0');
 		_putchar(n % 10 + '0');
 	}
-	else if (n > -2147483648 && n < 2147483647)
+	else if (n >= -2147483647 && n <= 2147483646)
 	{
 		if (n < 0)
 		{
@@ -38,15 +38,19 @@ void print_number(int n)
 		print_number(a);
 		_putchar(b + '0');
 	}
-	else if (n == -2147483648)
+	else if (n == INT_MIN)
 	{
+		a = INT_MAX / 10;
+		b = INT_MAX % 10;
 		_putchar(45);
-		print_number(214748364);
-		_putchar(8 + '0');
+		print_number(a);
+		_putchar((b + 1) + '0');
 	}
-	else if (n == 2147483647)
+	else if (n == INT_MAX)
 	{
-		print_number(214748364);
-		_putchar(7 + '0');
+		a = INT_MAX / 10;
+		b = INT_MAX % 10;
+		print_number(a);
+		_putchar(b + '0');
 	}
 }
