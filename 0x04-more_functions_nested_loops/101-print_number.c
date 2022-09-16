@@ -10,28 +10,43 @@
  */
 void print_number(int n)
 {
-	int a, i;
+	int a, b;
 	
-	a = 1, i = 0;
-	if (n < 0)
+	if (n == 0)
+	{
+		_putchar(n + '0');
+	}
+	else if (n > -100 && n < 100)
+	{
+		if (n < 0)
+		{
+			n = n * (-1);
+			_putchar(45);
+		}
+		_putchar(n / 10 + '0');
+		_putchar(n % 10 + '0');
+	}
+	else if (n > -2147483648 && n < 2147483647)
+	{
+		if (n < 0)
+		{
+			n = n * (-1);
+			_putchar(45);
+		}
+		a = n / 10;
+		b = n % 10;
+		print_number(a);
+		_putchar(b + '0');
+	}
+	else if (n == -2147483648)
 	{
 		_putchar(45);
-		n = -n;
+		print_number(214748364);
+		_putchar(8 + '0');
 	}
-	while (n / a != 0)
+	else if (n == 2147483647)
 	{
-		a = a * 10;
-		i++;
+		print_number(214748364);
+		_putchar(7 + '0');
 	}
-	a = a / 10;
-
-	while (i != 0)
-	{
-		_putchar((n / a) % 10 + '0');
-		a = a / 10;
-		i--;
-	}
-	if (n == 0)
-		_putchar('0' + n);
-
 }
