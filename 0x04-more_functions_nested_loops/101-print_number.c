@@ -10,7 +10,8 @@
  */
 void print_number(int n)
 {
-	int a, i, j;
+	unsigned int a;
+	int i, j;
 
 	a = 1, i = 0, j = 0;
 	if (n < 0)
@@ -20,17 +21,18 @@ void print_number(int n)
 	}
 	while (n / a != 0)
 	{
-		a *= 10;
+		a = a * 10;
 		i++;
 	}
-	a /= 10;
+	a = a / 10;
+
 	while (j < i)
 	{
 		_putchar((n / a) % 10 + '0');
-		a /= 10;
+		a = a / 10;
 		j++;
 	}
 	if (n == 0)
-		_putchar(n + '0');
+		_putchar('0' + n);
 
 }
