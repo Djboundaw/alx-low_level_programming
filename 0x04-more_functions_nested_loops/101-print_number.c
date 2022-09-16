@@ -10,13 +10,13 @@
  */
 void print_number(int n)
 {
-	int a, i, j;
+	int a, i;
 
-	a = 1, i = 0, j = 0;
+	a = 1, i = 0;
 	if (n < 0)
 	{
-		n = -n;
 		_putchar(45);
+		n = n * (-1);
 	}
 	while (n / a != 0)
 	{
@@ -25,11 +25,11 @@ void print_number(int n)
 	}
 	a = a / 10;
 
-	while (j < i)
+	while (i != 0)
 	{
 		_putchar((n / a) % 10 + '0');
 		a = a / 10;
-		j++;
+		i--;
 	}
 	if (n == 0)
 		_putchar('0' + n);
