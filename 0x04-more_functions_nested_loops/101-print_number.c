@@ -40,17 +40,13 @@ void print_number(int n)
 	}
 	else if (n == INT_MIN)
 	{
-		a = INT_MAX / 10;
-		b = INT_MAX % 10;
 		_putchar(45);
-		print_number(a);
-		_putchar((b + 1) + '0');
+		print_number(214748364);
+		_putchar(8 + '0');
 	}
 	else if (n == INT_MAX)
 	{
-		a = INT_MAX / 10;
-		b = INT_MAX % 10;
-		print_number(a);
-		_putchar(b + '0');
+		print_number(214748364);
+		_putchar(7 + '0');
 	}
 }
