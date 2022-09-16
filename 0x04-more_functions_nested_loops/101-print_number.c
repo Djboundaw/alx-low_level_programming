@@ -12,8 +12,7 @@ void print_number(int n)
 {
 	int a, i;
 	
-	a = 1;
-	i = 0;
+	a = 1, i = 0;
 	if (n < 0)
 	{
 		_putchar(45);
