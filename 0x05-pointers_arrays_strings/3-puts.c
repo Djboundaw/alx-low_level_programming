@@ -12,6 +12,8 @@ void _puts(char *str)
 
 	do {
 		i = *(str + length);
+		if (i == '\0')
+			break;
 		_putchar(i);
 		length++;
 	} while (i != '\0');
