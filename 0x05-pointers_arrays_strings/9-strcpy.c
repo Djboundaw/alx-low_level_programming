@@ -11,18 +11,18 @@ char *_strcpy(char *dest, char *src)
 {
 	int i, a, length;
 	char rev[500];
-	
+
 	i = 0, length = 0;
 	do {
 		a = *(src + length);
 		length++;
 	} while (a != '\0');
 	length -= 1;
-	for (i = 0; i < length; i++)
+	for (i = 0; i <= length; i++)
 	{
 		*(rev + i) = *(src + i);
 	}
-	for (i = 0; i < length; i++)
+	for (i = 0; i <= length; i++)
 	{
 		*(dest + i) = *(rev + i);
 	}
