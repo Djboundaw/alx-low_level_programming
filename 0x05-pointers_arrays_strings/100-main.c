@@ -8,9 +8,15 @@
  */
 int main(void)
 {
-	int nb;
+	int n;
 	
-	nb = _atoi("98");
+	/*n = _atoi("");
+	printf("%d\n", n);
+	nb = _atoi("Hello ----- world\n");
+	printf("%d\n", nb);*/
+	n = _atoi("-2147483648");
+	printf("%d\n", n);
+	/*nb = _atoi("98");
 	printf("%d\n", nb);
 	nb = _atoi("-402");
 	printf("%d\n", nb);
@@ -25,6 +31,6 @@ int main(void)
 	nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
 	printf("%d\n", nb);
 	nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-	printf("%d\n", nb);
+	printf("%d\n", nb);*/
 	return (0);
 }

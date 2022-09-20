@@ -9,11 +9,11 @@
  */
 int _atoi(char *s)
 {
-	int nbr;
-	int a, b, length;
+	unsigned nbr;
+	int a, b, c, length;
 	char i;
 
-	a = 0, length = 0;
+	a = 0, length = 0, c = 0;
 	do {
 		i = *(s + length);
 		if (i == 45)
@@ -21,23 +21,29 @@ int _atoi(char *s)
 		if (i >= 48 && i <= 57)
 		{
 			b = i - '0';
+			c++;
 			break;
 		}
 		length++;
 	} while (i != '\0');
-	nbr = b;
 	length += 1;
-	do {
-		i = *(s + length);
-		if (i >= 48 && i <= 57)
-		{
-			b = i - '0';
-			nbr = nbr * 10 + b;
-		}
-		else
-			break;
-		length++;
-	} while (i != '\0');
+	if (c == 0)
+		nbr = 0;
+	else
+	{
+		nbr = b;
+		do {
+			i = *(s + length);
+			if (i >= 48 && i <= 57)
+			{
+				b = i - '0';
+				nbr = nbr * 10 + b;
+			}
+			else
+				break;
+			length++;
+		} while (i != '\0');
+	}
 	if (a % 2 != 0)
 		nbr *= -1;
 	return (nbr);
