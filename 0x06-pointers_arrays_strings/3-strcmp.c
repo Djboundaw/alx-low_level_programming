@@ -10,20 +10,31 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, res;
+	int i, res, a, b, length1, length2;
 
-	i = 0, res = 0;
+	i = 0, res = 0, length1 = 0, length2 = 0;
 	do {
-		if (*(s1 + i) < *(s2 + i))
-			res = res - 1;
-		else if (*(s1 + i) > *(s2 + i))
-			res = res + 1;
+		a = *(s1 + length1);
+		length1++;
+	} while (a != '\0');
+	length1--;
+	do {
+		b = *(s2 + length2);
+		length2++;
+	} while (b != '\0');
+	length2--;
+	do {
+		a = *(s1 + i);
+		b = *(s2 + i);
+		if (a < b)
+			res -= 1;
+		else if (a > b)
+			res += 1;
 		i++;
-	} while (*(s1 + i) != '\0' && *(s2 + i) != '\0');
-	if (res < 0)
-		return (-15);
-	else if (res > 0)
-		return (15);
+	} while (a != '\0' && b != '\0');
+	if (length1 < length2)
+		res *= length1;
 	else
-		return (0);
+		res *= length2;
+	return (res);
 }
