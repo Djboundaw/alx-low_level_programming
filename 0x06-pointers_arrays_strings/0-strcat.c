@@ -7,11 +7,12 @@
  *
  * Return: return the result to dest
  */
+
 char *_strcat(char *dest, char *src)
 {
 	int i, length1, length2;
 	char rev[1000], *tmp;
-	
+
 	i = 0, length1 = 0, length2 = 0;
 	tmp = src;
 	do {
