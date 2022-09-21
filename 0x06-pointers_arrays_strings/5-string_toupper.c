@@ -11,7 +11,7 @@ char *string_toupper(char *str)
 {
 	int i, a;
 	char tmp[500];
-	
+
 	i = 0;
 	do {
 		a = *(str + i);
