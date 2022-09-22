@@ -18,6 +18,8 @@ char *cap_string(char *str)
 
 	n = 0;
 	do {
+		if(*(str + n) == '\t')
+			*(str + n) = ' ';
 		a = *(str + n);
 		for (i = 0; i < 13; i++)
 		{
