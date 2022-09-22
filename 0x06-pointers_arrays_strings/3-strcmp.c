@@ -32,9 +32,13 @@ int _strcmp(char *s1, char *s2)
 			res += 1;
 		i++;
 	} while (a != '\0' && b != '\0');
-	if (length1 < length2)
+	/*if (length1 < length2)
 		res *= length1;
 	else
-		res *= length2;
+		res *= length2;*/
+	if (res < 0)
+		res = -15;
+	else if (res > 0)
+		res = 15;
 	return (res);
 }
