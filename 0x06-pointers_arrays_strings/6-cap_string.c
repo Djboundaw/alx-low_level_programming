@@ -9,7 +9,7 @@
 char *cap_string(char *str)
 {
 	int i, n, a;
-	char word_sep[] = {' ', '\t', '\n', ',', ';', '.', '!', '?',
+	char word_sep[] = {32, '\t', '\n', ',', ';', '.', '!', '?',
 		'"', '(', ')', '{', '}'};
 
 	n = 0;
