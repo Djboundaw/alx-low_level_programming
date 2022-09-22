@@ -4,7 +4,7 @@
  * cap_string - capitalize all words of a string
  * @str: * before str, the string
  *
- * Return: return the new string s
+ * Return: return the new string str
  */
 char *cap_string(char *str)
 {
@@ -18,6 +18,8 @@ char *cap_string(char *str)
 
 	n = 0;
 	do {
+		if(*(str + n) == '\t')
+			*(str + n) = ' ';
 		a = *(str + n);
 		for (i = 0; i < 13; i++)
 		{
