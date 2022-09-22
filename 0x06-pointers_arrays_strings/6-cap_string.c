@@ -12,6 +12,8 @@ char *cap_string(char *str)
 	char word_sep[] = {32, '\t', '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 	n = 0;
+	if (str[0] >= 97 && str[0] <= 122)
+		str[n] = str[n] - 32;
 	do {
 		a = *(str + n);
 		for (i = 0; i < 13; i++)
