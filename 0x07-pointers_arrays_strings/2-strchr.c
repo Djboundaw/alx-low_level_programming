@@ -20,5 +20,8 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	} while (*(s + i) != '\0');
-	return (s + occ);
+	if (occ >= 0)
+		return (s + occ);
+	else
+		return ("\0");
 }
