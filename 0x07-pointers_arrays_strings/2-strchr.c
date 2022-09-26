@@ -10,6 +10,7 @@
 char *_strchr(char *s, char c)
 {
 	int i, occ;
+	char *n = '\0';
 
 	i = 0, occ = -1;
 	do {
@@ -23,5 +24,5 @@ char *_strchr(char *s, char c)
 	if (occ >= 0)
 		return (s + occ);
 	else
-		return ("\0");
+		return (n);
 }
