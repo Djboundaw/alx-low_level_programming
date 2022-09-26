@@ -9,20 +9,28 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, occ;
-	char *n = '\0';
+	int i, length, occ;
 
-	i = 0, occ = -1;
-	do {
-		if (s[i] == c)
-		{
-			occ = i;
-			break;
-		}
-		i++;
-	} while (*(s + i) != '\0');
+	i = 0, length = 0, occ = -1;
+	while (*(s + length) != '\0')
+	{
+		length++;
+	}
+	if (c == '\0')
+		occ = length;
+	else
+	{
+		do {
+			if (s[i] == c)
+			{
+				occ = i;
+				break;
+			}
+			i++;
+		} while (*(s + i) != '\0');
+	}
 	if (occ >= 0)
 		return (s + occ);
 	else
-		return (n);
+		return ('\0');
 }
