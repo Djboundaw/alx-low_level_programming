@@ -22,13 +22,11 @@ char *_strpbrk(char *s, char *accept)
 		for (j = 0; j < length; j++)
 		{
 			if (s[j] == accept[i])
-			{
 				occ = j;
-				continue;
-			}
 		}
-		if (occ <= min)
+		if (occ >= 0 && occ <= min)
 			min = occ;
+
 		i++;
 	} while (*(accept + i) != '\0');
 	if (occ >= 0)
