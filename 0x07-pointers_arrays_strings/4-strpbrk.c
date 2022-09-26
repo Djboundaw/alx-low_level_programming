@@ -17,14 +17,14 @@ char *_strpbrk(char *s, char *accept)
 	{
 		length++;
 	}
-	min = length;
+	min = length - 1;
 	do {
 		for (j = 0; j < length; j++)
 		{
 			if (s[j] == accept[i])
 			{
 				occ = j;
-				break;
+				continue;
 			}
 		}
 		if (occ <= min)
