@@ -6,7 +6,7 @@
  * @src: the source
  * @n: numbers of bytes to copy
  *
- * Retunr: the dest string
+ * Return: the dest string
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
