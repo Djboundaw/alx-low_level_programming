@@ -8,4 +8,15 @@
  */
 int is_palindrome(char *s)
 {
+	int res;
+
+	if (*s == '\0')
+		res = 1;
+	if (s[3] == '\0')
+	{
+		if (s[0] == s[1])
+			res = 1;
+	}
+	else
+
 }
