@@ -13,7 +13,7 @@ int _strlen_recursion(char *s)
 	length = 0;
 	if (s[0] == '\0')
 		length = 0;
-	if (s[1] == '\0' && s[0] != '\0')
+	else if (s[0] == '\0')
 		length = 1;
 	else
 		length = _strlen_recursion(s + 1) + 1;
