@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int isNumber(char const *s);
+int is_number(char *s);
 
 /**
  * main - Program that multiplies two numbers passed as arguments
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	{
 		while (--argc)
 		{
-			if (isNumber(argv[argc]))
+			if (is_number(argv[argc]))
 			{
 				printf("Error\n");
 				return (1);
@@ -33,7 +33,13 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
-int isNumber(char const *s)
+/**
+ * is_number - will check if a string is an integer
+ * @s: the ctring to check
+ *
+ * Return: 0 if it's an integer, 1 otherwise
+ */
+int is_number(char *s)
 {
 	int i;
 
