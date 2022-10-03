@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -10,5 +11,17 @@
  */
 char *_strdup(char *str)
 {
-	return ();
+	char *arr;
+	unsigned int size, i;
+
+	size = strlen(str);
+	i = 0;
+	if (size == 0)
+		return (NULL);
+	arr = malloc(size * sizeof(char));
+	do {
+		*(arr + i) = str[i];
+		i++;
+	} while (str[i] != '\0');
+	return (arr);
 }
