@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -11,5 +12,20 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	return ();
+	char *arr;
+	int size, i, len1, len2;
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	size = len1 + len2;
+	if (size == 0)
+		return ("");
+	arr = malloc(size * sizeof(char) + 1);
+	if (arr == 0)
+		return (NULL);
+	for (i = 0; i < len1; i++)
+		arr[i] = s1[i];
+	for (i = len1; i < size; i++)
+		arr[i] = s2[i - len1];
+	return (arr);
 }
