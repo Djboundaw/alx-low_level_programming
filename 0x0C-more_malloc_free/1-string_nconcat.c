@@ -35,10 +35,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	while (j < n)
 	{
-		*(tmp + i + j) = *(s2 + j);
+		*(tmp + i) = *(s2 + j);
+		i++;
 		j++;
 	}
-	tmp[i + j] = '\0';
+	tmp[i] = '\0';
 	return (tmp);
 }
 
