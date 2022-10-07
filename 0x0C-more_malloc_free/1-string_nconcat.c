@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 unsigned int _strlen(char *s);
 
