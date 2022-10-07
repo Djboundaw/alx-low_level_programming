@@ -1,0 +1,44 @@
+#include "main.h"
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * string_nconcat - function that concatenates two strings
+ * @s1: will be the return value
+ * @s2: will be concatenate to s1
+ * @n: size used for the memory
+ *
+ * Return: pointer to s1 if success else NULL
+ */
+
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *tmp;
+	unsigned int i, j;
+
+	i = 0, j = 0;
+	if (s2 == NULL)
+		return (s1);
+	if (s1 == NULL)
+	{
+		s1 = s2;
+		n = 0;
+	}
+	tmp = malloc(sizeof(s1) + n * sizeof(char) + 1);
+	if (tmp == NULL)
+		return (NULL);
+	if (strlen(s2) <= n)
+		n = strlen(s2) + 1;
+	while (*(s1 + i) != '\0')
+	{
+		tmp[i] = *(s1 + i);
+		i++;
+	}
+	while (j < n)
+	{
+		*(tmp + i + j) = *(s2 + j);
+		j++;
+	}
+	s1 = tmp;
+	return (s1);
+}
