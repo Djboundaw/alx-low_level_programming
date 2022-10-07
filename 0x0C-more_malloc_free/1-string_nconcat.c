@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
+
+unsigned int _strlen(char *s);
 
 /**
  * string_nconcat - function that concatenates two strings
@@ -17,14 +18,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j;
 
 	i = 0, j = 0;
-	if (s2 == NULL)
-		s2 = "";
 	if (s1 == NULL)
 		s1 = "";
-	if (n < strlen(s2))
-		tmp = malloc(strlen(s1) + n * sizeof(char) + 1);
+	if (s2 == NULL)
+		s2 = "";
+	if (n < _strlen(s2))
+		tmp = malloc(_strlen(s1) + n * sizeof(char) + 1);
 	else
-		tmp = malloc(strlen(s1) + strlen(s2) + 1);
+		tmp = malloc(_strlen(s1) + _strlen(s2) + 1);
 	if (tmp == NULL)
 		return (NULL);
 	while (*(s1 + i) != '\0')
@@ -39,4 +40,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	tmp[i + j] = '\0';
 	return (tmp);
+}
+
+/**
+ * _strlen - find length of a string
+ * @dest: string to find its length
+ *
+ * Return: length of the string dest
+ */
+
+unsigned int _strlen(char *dest)
+{
+	unsigned int size = 0;
+
+	for (; dest[size] != '\0'; size++)
+		;
+	return (size);
 }
