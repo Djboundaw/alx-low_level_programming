@@ -2,6 +2,10 @@
 #include <stdarg.h>
 
 /**
+ * sum_them_all - sum of all the parameters of the function
+ * @n: number of parameters
+ *
+ * Return: the sum of parameters or 0 if there is no parameter
  */
 int sum_them_all(const unsigned int n, ...)
 {
