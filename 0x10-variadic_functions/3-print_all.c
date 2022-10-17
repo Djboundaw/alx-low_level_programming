@@ -1,11 +1,13 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-#include "variadic_functions.h"
 
 /**
-* print_all - print char, integer, float and string
-* @format: format
-*/
+ * print_all - function that prints everything
+ * @format: the mandatory parameter
+ *
+ * Return: void function
+ */
 void print_all(const char * const format, ...)
 {
 	va_list list;
