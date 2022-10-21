@@ -17,4 +17,4 @@ void free_list(list_t *head)
 		free(head);
 		head = nextName;
 	}
-/bin/bash: q: command not found
+}
