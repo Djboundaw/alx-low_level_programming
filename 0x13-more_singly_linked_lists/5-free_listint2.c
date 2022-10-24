@@ -17,5 +17,6 @@ void free_listint2(listint_t **head)
 		free(deleteNode);
 		deleteNode = nextNode;
 	}
-	*head = NULL;
+	if(head)
+		*head = NULL;
 }
