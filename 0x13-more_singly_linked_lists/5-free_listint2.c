@@ -10,6 +10,8 @@ void free_listint2(listint_t **head)
 {
 	listint_t *nextNode, *deleteNode;
 
+	if (head == NULL)
+		return;
 	deleteNode = (*head);
 	while (deleteNode)
 	{
