@@ -11,7 +11,6 @@ size_t print_listint_safe(const listint_t *head)
 	size_t n;
 	long int a;
 
-	n = 0;
 	while (head)
 	{
 		a = head - head->next;
