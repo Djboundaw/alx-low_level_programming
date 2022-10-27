@@ -40,7 +40,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	for (i = len; i >= 0; i--)
 	{
-		if (b[i] > '1' || b[i] < '0')
+		if (b[i] > 57 || b[i] < 48)
 			return (0);
 		a = b[i] - '0';
 		n = n + a * _pow(2, len - i);
