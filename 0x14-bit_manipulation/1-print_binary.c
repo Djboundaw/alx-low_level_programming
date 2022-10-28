@@ -13,12 +13,12 @@ void print_binary(unsigned long int n)
 
 	num = n;
 	nbr = 0;
-	i = 40;
-	while (i >= 0)
+	i = 63;
+	while (i > 0)
 	{
-		b = num >> i;
-		if (b & 1)
+		if (num & 1)
 			break;
+		num = num >> 1;
 		i--;
 	}
 	while (i >= 0)
