@@ -10,6 +10,10 @@ int _pow(int x, int y);
 
 unsigned int binary_to_uint(const char *b);
 
+char *_strcat(char *dest, char *src);
+
+void print_rev(char *s);
+
 void print_binary(unsigned long int n);
 
 int get_bit(unsigned long int n, unsigned int index);
