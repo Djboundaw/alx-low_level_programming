@@ -35,9 +35,9 @@ unsigned int binary_to_uint(const char *b)
 	int a, i;
 
 	n = 0;
-	len = strlen(b) - 1;
 	if (b == NULL)
 		return (0);
+	len = strlen(b) - 1;
 	for (i = len; i >= 0; i--)
 	{
 		if (b[i] > 57 || b[i] < 48)
